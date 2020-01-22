@@ -2,32 +2,75 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-22T10:54:50 IST" name="Default suite" finished-at="2020-01-22T10:55:32 IST" duration-ms="41384">
+  <suite started-at="2020-01-22T12:44:29 IST" name="Suite" finished-at="2020-01-22T12:45:01 IST" duration-ms="32344">
     <groups>
     </groups>
-    <test started-at="2020-01-22T10:54:50 IST" name="Default test" finished-at="2020-01-22T10:55:32 IST" duration-ms="41384">
-      <class name="tests.NewTest12">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tests.NewTest12@1184ab05]" started-at="2020-01-22T10:54:50 IST" name="beforeTest" finished-at="2020-01-22T10:55:08 IST" duration-ms="17993" status="PASS">
+    <test started-at="2020-01-22T12:44:29 IST" name="node1" finished-at="2020-01-22T12:45:01 IST" duration-ms="32344">
+      <class name="tests.NewTest5">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:tests.NewTest5@2473d930]" started-at="2020-01-22T12:44:29 IST" name="beforeTest" finished-at="2020-01-22T12:44:47 IST" duration-ms="18116" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://10.236.69.36:4000/wd/hub]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="testRegisterLink()[pri:1, instance:tests.NewTest12@1184ab05]" started-at="2020-01-22T10:55:08 IST" name="testRegisterLink" finished-at="2020-01-22T10:55:09 IST" duration-ms="618" status="PASS">
+        <test-method signature="testDemoWebShopLogin(java.lang.String, java.lang.String)[pri:0, instance:tests.NewTest5@2473d930]" started-at="2020-01-22T12:44:47 IST" name="testDemoWebShopLogin" data-provider="dp1" finished-at="2020-01-22T12:44:54 IST" duration-ms="6909" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[askmail@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRegisterLink -->
-        <test-method signature="testLoginLink()[pri:2, instance:tests.NewTest12@1184ab05]" started-at="2020-01-22T10:55:09 IST" name="testLoginLink" finished-at="2020-01-22T10:55:09 IST" duration-ms="534" status="PASS">
+        </test-method> <!-- testDemoWebShopLogin -->
+        <test-method signature="testDemoWebShopLogin(java.lang.String, java.lang.String)[pri:0, instance:tests.NewTest5@2473d930]" started-at="2020-01-22T12:44:54 IST" name="testDemoWebShopLogin" data-provider="dp1" finished-at="2020-01-22T12:44:58 IST" duration-ms="3425" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[askmail@ymail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginLink -->
-        <test-method signature="testLoginButton()[pri:3, instance:tests.NewTest12@1184ab05]" started-at="2020-01-22T10:55:09 IST" name="testLoginButton" finished-at="2020-01-22T10:55:32 IST" duration-ms="22066" status="PASS">
+        </test-method> <!-- testDemoWebShopLogin -->
+        <test-method signature="testDemoWebShopLogin(java.lang.String, java.lang.String)[pri:0, instance:tests.NewTest5@2473d930]" started-at="2020-01-22T12:44:58 IST" name="testDemoWebShopLogin" data-provider="dp1" finished-at="2020-01-22T12:45:01 IST" duration-ms="3671" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[askmail@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginButton -->
-        <test-method is-config="true" signature="afetrTest()[pri:0, instance:tests.NewTest12@1184ab05]" started-at="2020-01-22T10:55:32 IST" name="afetrTest" finished-at="2020-01-22T10:55:32 IST" duration-ms="110" status="PASS">
+        </test-method> <!-- testDemoWebShopLogin -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.NewTest5@2473d930]" started-at="2020-01-22T12:45:01 IST" name="afterTest" finished-at="2020-01-22T12:45:01 IST" duration-ms="128" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afetrTest -->
-      </class> <!-- tests.NewTest12 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- afterTest -->
+      </class> <!-- tests.NewTest5 -->
+    </test> <!-- node1 -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -1,12 +1,17 @@
 package tests;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -17,26 +22,24 @@ import org.testng.annotations.Test;
 public class NewTest5 {
 	WebDriver driver;
 	@BeforeTest
-	@Parameters({"browser"})
-	public void beforeTest(String browservalue)
+	@Parameters({"node"})
+	public void beforeTest(String nodeValue) throws MalformedURLException
 	{
-		//System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver.exe");
-		if(browservalue.contentEquals("chrome"))
-		{
-			driver=new ChromeDriver();
-		}
-		else if(browservalue.contentEquals("firefox"))
-		{
-			System.setProperty("webdriver.gecko.driver",
-					"src/test/resources/drivers/geckodriver.exe");
-			driver=new FirefoxDriver();
-		}
-		else {
-			System.setProperty("webdriver.ie.driver",
-					"src/test/resources/drivers/IEDriverServer.exe");
-			driver=new InternetExplorerDriver();
-		}
-		
+		/*
+		 * //System.setProperty("webdriver.chrome.driver",
+		 * "src/test/resources/drivers/chromedriver.exe");
+		 * if(browservalue.contentEquals("chrome")) { driver=new ChromeDriver(); } else
+		 * if(browservalue.contentEquals("firefox")) {
+		 * System.setProperty("webdriver.gecko.driver",
+		 * "src/test/resources/drivers/geckodriver.exe"); driver=new FirefoxDriver(); }
+		 * else { System.setProperty("webdriver.ie.driver",
+		 * "src/test/resources/drivers/IEDriverServer.exe"); driver=new
+		 * InternetExplorerDriver(); }
+		 */
+		DesiredCapabilities ds=new DesiredCapabilities();
+		ds.setBrowserName("chrome");
+		ds.setPlatform(Platform.ANY);
+		driver=new RemoteWebDriver(new URL(nodeValue), ds);
 		driver.get("http://demowebshop.tricentis.com/login");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
