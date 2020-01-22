@@ -13,7 +13,7 @@ public class NewTest1 {
 	public void testCardLink()
 	{
 		System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver.exe");
-		WebDriver driver=new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 		driver.get("http://hdfcbank.com/");
 		driver.manage().window().maximize();
 		driver.findElement(By.id("popupBoxClose")).click();
@@ -24,7 +24,6 @@ public class NewTest1 {
 		String title=driver.getTitle();
 		Assert.assertTrue(title.startsWith("Credit Card"));
 	
-		
 	}
 
 }
