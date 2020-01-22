@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="TestGroups(failed)">
-    <groups>
-      <run>
-        <include name="dry"/>
-      </run>
-    </groups>
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="node1(failed)">
+    <parameter name="node" value="http://10.236.69.36:4000/wd/hub"/>
     <classes>
-      <class name="tests.NewTest1">
+      <class name="tests.NewTest5">
         <methods>
-          <include name="testCardLink"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="testDemoWebShopLogin"/>
         </methods>
-      </class> <!-- tests.NewTest1 -->
+      </class> <!-- tests.NewTest5 -->
     </classes>
-  </test> <!-- TestGroups(failed) -->
+  </test> <!-- node1(failed) -->
+  <test thread-count="5" name="node2(failed)">
+    <parameter name="node" value="http://10.236.69.25:4444/wd/hub"/>
+    <classes>
+      <class name="tests.NewTest5">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="testDemoWebShopLogin"/>
+        </methods>
+      </class> <!-- tests.NewTest5 -->
+    </classes>
+  </test> <!-- node2(failed) -->
+  <test thread-count="5" name="node3(failed)">
+    <parameter name="node" value="http://10.236.69.32:7089/wd/hub"/>
+    <classes>
+      <class name="tests.NewTest5">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="testDemoWebShopLogin"/>
+        </methods>
+      </class> <!-- tests.NewTest5 -->
+    </classes>
+  </test> <!-- node3(failed) -->
+  <test thread-count="5" name="node4(failed)">
+    <parameter name="node" value="http://10.236.69.169:1111/wd/hub"/>
+    <classes>
+      <class name="tests.NewTest5">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="testDemoWebShopLogin"/>
+        </methods>
+      </class> <!-- tests.NewTest5 -->
+    </classes>
+  </test> <!-- node4(failed) -->
 </suite> <!-- Failed suite [Suite] -->
